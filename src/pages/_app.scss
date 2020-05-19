@@ -1,6 +1,6 @@
-@import "../utils/map-deep-get.scss";
-@import "../design-tokens/colors.scss";
-@import "../design-tokens/typography.scss";
+@import '../utils/map-deep-get.scss';
+@import '../design-tokens/colors.scss';
+@import '../design-tokens/typography.scss';
 
 html,
 html.dark,
@@ -10,8 +10,8 @@ html.light {
     background-color: var(--product-background);
     // IE11
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        color: #{map-deep-get($colors, "colors", "neutrals", 10)};
-        background-color: #{map-deep-get($colors, "colors", "neutrals", 80)};
+        color: #{map-deep-get($colors, 'colors', 'neutrals', 10)};
+        background-color: #{map-deep-get($colors, 'colors', 'neutrals', 80)};
     }
 }
 
@@ -19,5 +19,5 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: map-deep-get($typography, "font-family", "regular"), sans-serif;
+    font-family: map-deep-get($typography, 'font-family', 'regular'), sans-serif;
 }

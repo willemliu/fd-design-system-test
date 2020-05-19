@@ -1,12 +1,37 @@
-import "./_app.scss";
+import React from 'react';
+import './_app.scss';
+import Head from 'next/head';
 // import "@fdmg/design-system/main.css";
-import "@fdmg/design-system/design-tokens/design-tokens.css";
-import "@fdmg/design-system/article-meta/ArticleMeta.css";
-import "@fdmg/design-system/article-summary/Summary.css";
-import "@fdmg/design-system/input/Switch.css";
+import '@fdmg/design-system/design-tokens/design-tokens.css';
+import '@fdmg/design-system/article-meta/ArticleMeta.css';
+import '@fdmg/design-system/article-summary/Summary.css';
+import '@fdmg/design-system/input/Switch.css';
 
-function App({ Component, pageProps }) {
-    return <Component {...pageProps} />;
+function App({ Component, pageProps }: any) {
+    return (
+        <>
+            <Head>
+                <title>FD Design System Test</title>
+
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `try {
+    var query = window.matchMedia("(prefers-color-scheme: dark)");
+    var preference = window.localStorage.getItem("theme");
+    if (preference) {
+        if ((preference === "system" && query.matches) || preference === "dark") {
+            document.documentElement.style.backgroundColor = "#191919";
+        } else {
+            document.documentElement.style.backgroundColor = "#FFEADB";
+        }
+    }
+} catch (e) {}`,
+                    }}
+                />
+            </Head>
+            <Component {...pageProps} />
+        </>
+    );
 }
 
 // Will be called once for every metric that has to be reported.
