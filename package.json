@@ -18,6 +18,7 @@
     "license": "ISC",
     "dependencies": {
         "@fdmg/design-system": "^0.2.21",
+        "cross-env": "^7.0.2",
         "next": "^9.4.1",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
@@ -28,7 +29,6 @@
         "@types/react-dom": "^16.9.8",
         "@typescript-eslint/eslint-plugin": "^2.34.0",
         "@typescript-eslint/parser": "^2.34.0",
-        "cross-env": "^7.0.2",
         "eslint": "^7.0.0",
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-prettier": "^3.1.3",
