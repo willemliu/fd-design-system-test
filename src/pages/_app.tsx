@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './_app.scss';
 import Head from 'next/head';
 // import "@fdmg/design-system/main.css";
@@ -8,6 +8,10 @@ import '@fdmg/design-system/article-summary/Summary.css';
 import '@fdmg/design-system/input/Switch.css';
 
 function App({ Component, pageProps }: any) {
+    useEffect(() => {
+        document.documentElement.style.backgroundColor = '';
+    }, []);
+
     return (
         <>
             <Head>
@@ -22,7 +26,7 @@ function App({ Component, pageProps }: any) {
         if ((preference === "system" && query.matches) || preference === "dark") {
             document.documentElement.style.backgroundColor = "#191919";
         } else {
-            document.documentElement.style.backgroundColor = "#FFEADB";
+            document.documentElement.style.backgroundColor = "#f1ded2";
         }
     }
 } catch (e) {}`,
