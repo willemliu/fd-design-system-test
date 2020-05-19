@@ -6,11 +6,11 @@
     "scripts": {
         "build": "next build",
         "dev": "next dev",
+        "export": "next export",
         "lint": "eslint \"src/**\"",
         "prettier": "prettier -c src/**/*.ts*",
         "postinstall": "npm run build",
-        "start": "npx next start --port $PORT",
-        "start:3000": "next start",
+        "start": "cross-env NODE_ENV=production node server.js",
         "test": "echo \"Error: no test specified\" && exit 0",
         "webpack-bundle-analyzer:next": "cross-env WEBPACK_BUNDLE_ANALYZER=true NOW_SERVERLESS=false next build"
     },
