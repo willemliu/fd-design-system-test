@@ -1,0 +1,31 @@
+{
+    "name": "fd-design-system-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "postinstall": "npm run build",
+        "start": "next start --port $PORT",
+        "start:3000": "next start",
+        "test": "echo \"Error: no test specified\" && exit 0",
+        "webpack-bundle-analyzer:next": "cross-env WEBPACK_BUNDLE_ANALYZER=true NOW_SERVERLESS=false next build"
+    },
+    "author": "Willem Liu",
+    "license": "ISC",
+    "dependencies": {
+        "@fdmg/design-system": "^0.2.21"
+    },
+    "devDependencies": {
+        "@types/node": "^13.13.6",
+        "@types/react": "^16.9.35",
+        "@types/react-dom": "^16.9.8",
+        "cross-env": "^7.0.2",
+        "next": "^9.4.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "typescript": "^3.9.2",
+        "webpack-bundle-analyzer": "^3.7.0"
+    }
+}
