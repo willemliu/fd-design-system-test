@@ -9,7 +9,7 @@
         "lint": "eslint \"src/**\"",
         "prettier": "prettier -c src/**/*.ts*",
         "postinstall": "npm run build",
-        "start": "next start --port $PORT",
+        "start": "npx next start --port $PORT",
         "start:3000": "next start",
         "test": "echo \"Error: no test specified\" && exit 0",
         "webpack-bundle-analyzer:next": "cross-env WEBPACK_BUNDLE_ANALYZER=true NOW_SERVERLESS=false next build"
