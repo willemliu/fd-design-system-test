@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './dummy.module.scss';
-import { GetStaticPropsContext } from 'next';
+import { GetStaticPropsContext, GetStaticProps } from 'next';
 
 function Page(props: any) {
     return (
@@ -10,12 +10,14 @@ function Page(props: any) {
     );
 }
 
-export function getStaticProps(context: GetStaticPropsContext) {
+export const getStaticProps: GetStaticProps = async (
+    context: GetStaticPropsContext
+) => {
     return {
         props: {
             params: context?.params ?? null,
         },
     };
-}
+};
 
 export default Page;

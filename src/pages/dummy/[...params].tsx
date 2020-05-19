@@ -1,12 +1,12 @@
 import Page, { getStaticProps } from './index';
 import { GetStaticPaths } from 'next';
 
-export function getStaticPaths(): GetStaticPaths {
+export const getStaticPaths: GetStaticPaths = async () => {
     return {
         paths: [{ params: { params: ['index'] } }],
         fallback: true,
     };
-}
+};
 
 export { getStaticProps };
 
