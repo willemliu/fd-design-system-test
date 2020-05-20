@@ -3,6 +3,7 @@ import './_app.scss';
 import Head from 'next/head';
 // import "@fdmg/design-system/main.css";
 import '@fdmg/design-system/design-tokens/design-tokens.css';
+import '@fdmg/design-system/button/Button.css';
 import '@fdmg/design-system/article-meta/ArticleMeta.css';
 import '@fdmg/design-system/article-summary/Summary.css';
 import '@fdmg/design-system/input/Switch.css';

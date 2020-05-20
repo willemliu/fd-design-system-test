@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import { ArticleMeta, Summary, Switch } from "@fdmg/design-system";
+import { Button } from '@fdmg/design-system';
 import { ArticleMeta } from '@fdmg/design-system/article-meta/ArticleMeta';
 import { Summary } from '@fdmg/design-system/article-summary/Summary';
 import { Switch } from '@fdmg/design-system/input/Switch';
@@ -19,7 +19,7 @@ function Index() {
 
     return (
         <section>
-            <ArticleMeta authors={['Willem L.']} />
+            <ArticleMeta authors={[{ fullName: 'Willem L.' }]} />
 
             <Switch
                 id="switchId"
@@ -31,6 +31,8 @@ function Index() {
                 title="In het kort"
                 summaries={['Samenvatting 1', 'Samenvatting 2']}
             />
+
+            <Button>Test button</Button>
         </section>
     );
 }
