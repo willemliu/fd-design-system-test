@@ -17,22 +17,6 @@ function App({ Component, pageProps }: any) {
         <>
             <Head>
                 <title>FD Design System Test</title>
-
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `try {
-    var query = window.matchMedia("(prefers-color-scheme: dark)");
-    var preference = window.localStorage.getItem("theme");
-    if (preference) {
-        if ((preference === "system" && query.matches) || preference === "dark") {
-            document.documentElement.style.backgroundColor = "#191919";
-        } else {
-            document.documentElement.style.backgroundColor = "#f1ded2";
-        }
-    }
-} catch (e) {}`,
-                    }}
-                />
             </Head>
             <Component {...pageProps} />
         </>
