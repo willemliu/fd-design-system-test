@@ -7,6 +7,7 @@ import '@fdmg/design-system/button/Button.css';
 import '@fdmg/design-system/article-meta/ArticleMeta.css';
 import '@fdmg/design-system/article-summary/Summary.css';
 import '@fdmg/design-system/input/Switch.css';
+import '@fdmg/design-system/card/VerticalCard3.css';
 
 function App({ Component, pageProps }: any) {
     useEffect(() => {
