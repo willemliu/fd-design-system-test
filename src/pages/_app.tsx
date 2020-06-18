@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './_app.scss';
 import Head from 'next/head';
 import '@fdmg/design-system/main.css';
+
 // import '@fdmg/design-system/design-tokens/design-tokens.css';
 // import '@fdmg/design-system/button/Button.css';
 // import '@fdmg/design-system/article-meta/ArticleMeta.css';
