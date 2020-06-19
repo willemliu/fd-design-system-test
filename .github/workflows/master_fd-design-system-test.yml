@@ -35,14 +35,14 @@ jobs:
         package: .
 
     - name: 'Deploy to Azure Static Website'
-      - uses: actions/checkout@master
-      - uses: feeloor/azure-static-website-deploy@master
-        env:
-          SOURCE_DIR: "./out"
-          AZURE_CLIENT_ID: ${{secrets.AzureClientId}}
-          AZURE_TENANT_ID: ${{secrets.AzureTenantId}}
-          AZURE_SECRET: ${{secrets.AzureSecret}}
-          AZURE_SUBSCRIPTION_ID: ${{secrets.AzureSubscriptionId}}
-          AZURE_STORAGE_ACCOUNT_NAME: ${{secrets.AzureStorageAccountName}}
-          AZURE_INDEX_DOCUMENT_NAME: index.html
+      uses: actions/checkout@master
+      uses: feeloor/azure-static-website-deploy@master
+      env:
+        SOURCE_DIR: "./out"
+        AZURE_CLIENT_ID: ${{secrets.AzureClientId}}
+        AZURE_TENANT_ID: ${{secrets.AzureTenantId}}
+        AZURE_SECRET: ${{secrets.AzureSecret}}
+        AZURE_SUBSCRIPTION_ID: ${{secrets.AzureSubscriptionId}}
+        AZURE_STORAGE_ACCOUNT_NAME: ${{secrets.AzureStorageAccountName}}
+        AZURE_INDEX_DOCUMENT_NAME: index.html
       continue-on-error: true
