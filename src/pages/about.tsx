@@ -9,7 +9,7 @@ export default function Page() {
                 <a href="https://fd-design-system.now.sh">FD Design System</a>.
             </p>
             <p>
-                Besides that this repo is also build and deployed using Github
+                Besides that, this repo is also build and deployed using Github
                 Actions.
             </p>
             <p>This repo is deployed to the following locations:</p>

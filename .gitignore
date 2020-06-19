@@ -1,6 +1,7 @@
 .next
-.vscode
 .env*
+.vscode
 dist
+local.settings.json
 out
 node_modules
