@@ -5,7 +5,8 @@
     "main": "index.js",
     "sideEffects": false,
     "scripts": {
-        "build": "npm run build:next && npm run export",
+        "build": "npm run build:func && npm run build:next && npm run export",
+        "build:func": "tsc -b tsconfig.func.json",
         "build:next": "next build",
         "dev": "next dev",
         "export": "next export",
