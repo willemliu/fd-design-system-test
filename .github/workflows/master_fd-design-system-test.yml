@@ -33,15 +33,3 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_69c0ebde89734fc2bc7c6cb00c644e61 }}
         package: .
-
-    - name: 'Deploy to Azure Static Website'
-      uses: feeloor/azure-static-website-deploy@v0.1.0
-      env:
-        SOURCE_DIR: "./out"
-        AZURE_CLIENT_ID: ${{secrets.AzureClientId}}
-        AZURE_TENANT_ID: ${{secrets.AzureTenantId}}
-        AZURE_SECRET: ${{secrets.AzureSecret}}
-        AZURE_SUBSCRIPTION_ID: ${{secrets.AzureSubscriptionId}}
-        AZURE_STORAGE_ACCOUNT_NAME: ${{secrets.AzureStorageAccountName}}
-        AZURE_INDEX_DOCUMENT_NAME: index.html
-      continue-on-error: true
