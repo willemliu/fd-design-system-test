@@ -35,8 +35,7 @@ jobs:
         package: .
 
     - name: 'Deploy to Azure Static Website'
-      uses: actions/checkout@master
-      uses: feeloor/azure-static-website-deploy@master
+      uses: feeloor/azure-static-website-deploy@v0.1.0
       env:
         SOURCE_DIR: "./out"
         AZURE_CLIENT_ID: ${{secrets.AzureClientId}}
