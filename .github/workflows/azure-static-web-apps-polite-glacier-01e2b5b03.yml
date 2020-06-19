@@ -19,17 +19,17 @@ jobs:
         with:
           submodules: true
 
-      # - name: Set up Node.js version
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: '12.x'
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
 
-      # - name: npm install, build, and test
-      #   run: |
-      #     npm install
-      #     npm run build --if-present
-      #     npm run export --if-present
-      #     npm run test --if-present
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run export --if-present
+          npm run test --if-present
 
       - name: Build And Deploy
         id: builddeploy
@@ -40,9 +40,9 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match you app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
+          app_location: "/out" # App source code path
           api_location: "/api" # Api source code path - optional
-          app_artifact_location: "/out" # Built app content directory - optional
+          app_artifact_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
