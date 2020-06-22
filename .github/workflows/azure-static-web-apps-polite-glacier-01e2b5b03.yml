@@ -34,7 +34,7 @@ jobs:
 
       - name: DEV npm install, build, and test
         if:
-          contains('refs/heads/master', github.ref)
+          contains('refs/heads/develop', github.ref)
         run: |
           npm install
           npx cross-env ENVIRONMENT=${{secrets.ENVIRONMENT_DEV}} npm run build --if-present
