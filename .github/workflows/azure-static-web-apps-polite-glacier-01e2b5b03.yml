@@ -25,16 +25,14 @@ jobs:
           node-version: '12.x'
 
       - name: PROD npm install, build, and test
-        if:
-          contains('refs/heads/master', github.ref)
+        if: github.ref == 'refs/heads/master'
         run: |
           npm install
           npx cross-env ENVIRONMENT=${{secrets.ENVIRONMENT}} npm run build --if-present
           npx cross-env ENVIRONMENT=${{secrets.ENVIRONMENT}} npm run test --if-present
 
       - name: DEV npm install, build, and test
-        if:
-          contains('refs/heads/develop', github.ref)
+        if: github.ref == 'refs/heads/develop'
         run: |
           npm install
           npx cross-env ENVIRONMENT=${{secrets.ENVIRONMENT_DEV}} npm run build --if-present
