@@ -13,6 +13,7 @@ const webpackConfig = {
     entry: { 'GetMessage/index': './api/GetMessage/index.ts' },
     output: {
         path: path.join(__dirname, '/api/'),
+        libraryTarget: 'commonjs2',
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
