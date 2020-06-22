@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const NODE_ENV = JSON.stringify(
     process.env.NODE_ENV ? process.env.NODE_ENV : 'development'
 );
@@ -34,6 +35,11 @@ const webpackConfig = {
             },
         ],
     },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.ENVIRONMENT': JSON.stringify(process.env.ENVIRONMENT),
+        }),
+    ],
 };
 
 module.exports = webpackConfig;

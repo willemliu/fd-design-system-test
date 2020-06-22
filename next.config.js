@@ -5,7 +5,7 @@ module.exports = {
         polyfillsOptimization: true,
     },
     env: {
-        ENVIRONMENT_DEV: process.env.ENVIRONMENT_DEV,
+        ENVIRONMENT: process.env.ENVIRONMENT,
     },
     webpack: (config, options) => {
         config.node = {

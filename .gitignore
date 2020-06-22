@@ -1,7 +1,7 @@
 .next
 .env*
 .vscode
-api/**/*.js
+api/**/*.js*
 dist
 local.settings.json
 out
