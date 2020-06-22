@@ -3,4 +3,4 @@
 
 # fd-design-system-test
 
-Test the FD Design System
+Integration testing the FD Design System.
