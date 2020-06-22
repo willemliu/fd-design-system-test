@@ -1,12 +1,15 @@
 module.exports = {
-    target: process.env.NOW_SERVERLESS === "false" ? "server" : "serverless",
-    pageExtensions: ["jsx", "js", "ts", "tsx"],
+    target: process.env.NOW_SERVERLESS === 'false' ? 'server' : 'serverless',
+    pageExtensions: ['jsx', 'js', 'ts', 'tsx'],
     experimental: {
         polyfillsOptimization: true,
     },
+    env: {
+        ENVIRONMENT_DEV: process.env.ENVIRONMENT_DEV,
+    },
     webpack: (config, options) => {
         config.node = {
-            fs: "empty",
+            fs: 'empty',
         };
 
         /**
@@ -24,14 +27,14 @@ module.exports = {
         /**
          * Generate webpack bundle report.
          */
-        if (process.env.WEBPACK_BUNDLE_ANALYZER == "true") {
-            const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+        if (process.env.WEBPACK_BUNDLE_ANALYZER == 'true') {
+            const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
             config.plugins.push(
                 new BundleAnalyzerPlugin({
-                    analyzerMode: "static",
+                    analyzerMode: 'static',
                     reportFilename: options.isServer
-                        ? "../../dist/analyzer/server.html"
-                        : "../dist/analyzer/client.html",
+                        ? '../../dist/analyzer/server.html'
+                        : '../dist/analyzer/client.html',
                     openAnalyzer: false,
                 })
             );
