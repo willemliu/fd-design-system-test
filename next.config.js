@@ -4,9 +4,6 @@ module.exports = {
     experimental: {
         polyfillsOptimization: true,
     },
-    env: {
-        ENVIRONMENT: process.env.ENVIRONMENT,
-    },
     webpack: (config, options) => {
         config.node = {
             fs: 'empty',
