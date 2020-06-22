@@ -1,7 +1,5 @@
 import { AzureFunction, Context, HttpRequest } from '@azure/functions';
 
-declare let process: any;
-
 const httpTrigger: AzureFunction = async function (
     context: Context,
     req: HttpRequest
