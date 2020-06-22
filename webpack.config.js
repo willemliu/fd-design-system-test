@@ -6,6 +6,7 @@ const devtool = NODE_ENV == '"development"' ? 'source-map' : undefined;
 const isDev = NODE_ENV == '"development"';
 
 const webpackConfig = {
+    devtool,
     optimization: {
         usedExports: true,
         minimize: false,
