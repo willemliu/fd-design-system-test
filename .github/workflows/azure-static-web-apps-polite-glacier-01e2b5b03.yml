@@ -4,12 +4,10 @@ on:
   push:
     branches:
       - master
-      - develop
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - master
-      - develop
 
 jobs:
   build_and_deploy_job:
@@ -33,8 +31,8 @@ jobs:
           npx cross-env ENVIRONMENT=${{secrets.ENVIRONMENT}} npm run build --if-present
           npx cross-env ENVIRONMENT=${{secrets.ENVIRONMENT}} npm run test --if-present
 
-      - name: DEV npm install, build, and test
-        if: github.ref == 'refs/heads/develop'
+      - name: STAGING npm install, build, and test
+        if: github.ref != 'refs/heads/master'
         run: |
           npm install
           npx cross-env ENVIRONMENT=${{secrets.ENVIRONMENT_DEV}} npm run build --if-present
