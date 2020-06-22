@@ -10,6 +10,8 @@ import '@fdmg/design-system/main.css';
 // import '@fdmg/design-system/input/Switch.css';
 // import '@fdmg/design-system/card/VerticalCard3.css';
 
+declare let process: any;
+
 function App({ Component, pageProps }: any) {
     useEffect(() => {
         document.documentElement.style.backgroundColor = '';
@@ -18,7 +20,9 @@ function App({ Component, pageProps }: any) {
     return (
         <>
             <Head>
-                <title>FD Design System Test</title>
+                <title>
+                    FD Design System Test | {process.env.ENVIRONMENT_DEV}
+                </title>
             </Head>
             <Component {...pageProps} />
         </>
