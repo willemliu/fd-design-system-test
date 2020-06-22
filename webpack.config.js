@@ -9,7 +9,7 @@ const webpackConfig = {
     devtool,
     optimization: {
         usedExports: true,
-        minimize: false,
+        minimize: true,
     },
     entry: { 'GetMessage/index': './api/GetMessage/index.ts' },
     output: {
