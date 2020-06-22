@@ -16,7 +16,7 @@
         "start": "node server.js",
         "start:functions": "func start",
         "test": "echo \"Error: no test specified\" && exit 0",
-        "webpack:func": "webpack --mode=production",
+        "webpack:func": "cross-env ENVIRONMENT=${ENVIRONMENT} webpack --mode=production",
         "webpack-bundle-analyzer:next": "cross-env WEBPACK_BUNDLE_ANALYZER=true NOW_SERVERLESS=false next build"
     },
     "author": "Willem Liu",

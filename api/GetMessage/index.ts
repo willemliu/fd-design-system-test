@@ -10,7 +10,7 @@ const httpTrigger: AzureFunction = async function (
     const name = req.query.name || (req.body && req.body.name);
     const responseMessage = name
         ? `${
-              process.env.ENVIRONMENT_DEV ?? ''
+              process.env.ENVIRONMENT ?? ''
           } Hello, ${name}. This HTTP triggered function executed successfully.`
         : 'This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.';
 
