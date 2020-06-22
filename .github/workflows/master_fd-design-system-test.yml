@@ -23,8 +23,8 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm run build --ENVIRONMENT=${{ENVIRONMENT_DEV}} --if-present
-        npm run test --ENVIRONMENT=${{ENVIRONMENT_DEV}} --if-present
+        npm run build --ENVIRONMENT=${{secrets.ENVIRONMENT_DEV}} --if-present
+        npm run test --ENVIRONMENT=${{secrets.ENVIRONMENT_DEV}} --if-present
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
