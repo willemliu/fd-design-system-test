@@ -6,6 +6,11 @@ export default class MyDocument extends Document<any> {
         return (
             <Html lang="nl">
                 <Head>
+                    <link
+                        href="https://fd-design-system.now.sh/assets/fonts/style.css"
+                        rel="stylesheet"
+                    />
+
                     <script
                         dangerouslySetInnerHTML={{
                             __html: `try {

@@ -9,6 +9,7 @@ import React, { useEffect } from 'react';
 import { ArticleMeta } from '@fdmg/design-system/article-meta/ArticleMeta';
 import { Summary } from '@fdmg/design-system/article-summary/Summary';
 import { Button } from '@fdmg/design-system/button/Button';
+import { TextInput } from '@fdmg/design-system/input/TextInput';
 import { Switch } from '@fdmg/design-system/input/Switch';
 import { VerticalCard3 } from '@fdmg/design-system/card/VerticalCard3';
 
@@ -28,6 +29,7 @@ function Index() {
     return (
         <section>
             <ArticleMeta authors={[{ fullName: 'Willem L.' }]} />
+            <hr />
 
             <Switch
                 id="switchId"
@@ -35,12 +37,20 @@ function Index() {
                 onChange={handleSwitch}
             />
 
+            <hr />
             <Summary
                 title="In het kort"
                 summaries={['Samenvatting 1', 'Samenvatting 2']}
             />
+            <hr />
 
             <Button>Test button</Button>
+
+            <hr />
+
+            <TextInput id="textinput" required={true} />
+
+            <hr />
 
             <VerticalCard3
                 id="1321841"
