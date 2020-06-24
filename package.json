@@ -28,7 +28,7 @@
     },
     "devDependencies": {
         "@azure/functions": "^1.0.2-beta2",
-        "@fdmg/design-system": "^0.3.25-canary.1",
+        "@fdmg/design-system": "^0.3.27-canary.1",
         "@types/node": "^13.13.12",
         "@types/react": "^16.9.38",
         "@types/react-dom": "^16.9.8",

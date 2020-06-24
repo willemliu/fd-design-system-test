@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
-import {
-    ArticleMeta,
-    Summary,
-    Button,
-    Switch,
-    VerticalCard3,
-} from '@fdmg/design-system';
+// import {
+//     ArticleMeta,
+//     Summary,
+//     Button,
+//     Switch,
+//     VerticalCard3,
+// } from '@fdmg/design-system';
+import { ArticleMeta } from '@fdmg/design-system/article-meta/ArticleMeta';
+import { Summary } from '@fdmg/design-system/article-summary/Summary';
+import { Button } from '@fdmg/design-system/button/Button';
+import { Switch } from '@fdmg/design-system/input/Switch';
+import { VerticalCard3 } from '@fdmg/design-system/card/VerticalCard3';
 
 function Index() {
     useEffect(() => {
