@@ -1,29 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // import {
 //     ArticleMeta,
 //     Summary,
 //     Button,
 //     Switch,
 //     VerticalCard3,
+//     TextInput,
+//     LinkCard,
 // } from '@fdmg/design-system';
-import { ArticleMeta } from '@fdmg/design-system/article-meta/ArticleMeta';
-import { Summary } from '@fdmg/design-system/article-summary/Summary';
-import { Button } from '@fdmg/design-system/button/Button';
-import { TextInput } from '@fdmg/design-system/input/TextInput';
-import { Switch } from '@fdmg/design-system/input/Switch';
-import { VerticalCard3 } from '@fdmg/design-system/card/VerticalCard3';
+import { ArticleMeta } from '@fdmg/design-system/components/article-meta/ArticleMeta';
+import { LinkCard } from '@fdmg/design-system/components/card/LinkCard';
+import { Summary } from '@fdmg/design-system/components/article-summary/Summary';
+import { Button } from '@fdmg/design-system/components/button/Button';
+import { TextInput } from '@fdmg/design-system/components/input/TextInput';
+import { Switch } from '@fdmg/design-system/components/input/Switch';
+import { VerticalCard3 } from '@fdmg/design-system/components/card/VerticalCard3';
 
 function Index() {
-    useEffect(() => {
-        document.documentElement.classList.add('light');
-    }, []);
+    const [mode, setMode] = useState('light');
 
-    function handleSwitch(e: React.ChangeEvent<HTMLInputElement>) {
-        document.documentElement.classList.remove('light');
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add(
-            e.currentTarget.checked ? 'dark' : 'light'
-        );
+    useEffect(() => {
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(mode);
+    }, [mode]);
+
+    function handleSwitch() {
+        setMode(mode === 'light' ? 'dark' : 'light');
     }
 
     return (
@@ -35,6 +37,7 @@ function Index() {
                 id="switchId"
                 label="Label of the switch"
                 onChange={handleSwitch}
+                checked={mode === 'dark'}
             />
 
             <hr />
@@ -44,11 +47,19 @@ function Index() {
             />
             <hr />
 
-            <Button>Test button</Button>
+            <Button onClick={handleSwitch}>Test button</Button>
 
             <hr />
 
             <TextInput id="textinput" required={true} />
+
+            <hr />
+
+            <LinkCard
+                link="/mijn-nieuws"
+                title="Beheer"
+                linkText="Ga naar laatste nieuws"
+            />
 
             <hr />
 

@@ -18,6 +18,12 @@ html.light {
 html,
 body {
     padding: 0;
-    margin: 0;
+    margin: 1rem;
     font-family: map-deep-get($typography, 'font-family', 'regular'), sans-serif;
+}
+
+hr {
+    border-style: dashed;
+    border-color: red;
+    margin: 1rem 0;
 }

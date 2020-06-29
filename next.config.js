@@ -9,6 +9,12 @@ module.exports = {
             fs: 'empty',
         };
 
+        // SVG
+        config.module.rules.push({
+            test: /\.svg$/,
+            loader: 'raw-loader',
+        });
+
         /**
          * This config replaces React with PreactX (3KB gzipped).
          * PreactX should be a 100% drop-in replacement for React.
