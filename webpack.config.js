@@ -33,15 +33,12 @@ const webpackConfig = {
                     },
                 ],
             },
+            {
+                test: /\.svg$/,
+                loader: 'raw-loader',
+            },
         ],
     },
-    rules: [
-        // SVG
-        {
-            test: /\.svg$/,
-            loader: 'raw-loader',
-        },
-    ],
     plugins: [
         new webpack.DefinePlugin({
             'process.env.ENVIRONMENT': JSON.stringify(process.env.ENVIRONMENT),
