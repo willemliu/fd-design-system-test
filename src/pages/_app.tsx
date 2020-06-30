@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
 import './_app.scss';
 import Head from 'next/head';
-import '@fdmg/design-system/main.css';
+// import '@fdmg/design-system/main.css';
 
-// import '@fdmg/design-system/components/design-tokens/design-tokens.css';
-// import '@fdmg/design-system/components/button/Button.css';
-// import '@fdmg/design-system/components/article-meta/ArticleMeta.css';
-// import '@fdmg/design-system/components/article-summary/Summary.css';
-// import '@fdmg/design-system/components/input/TextInput.css';
-// import '@fdmg/design-system/components/input/Switch.css';
-// import '@fdmg/design-system/components/card/LinkCard.css';
-// import '@fdmg/design-system/components/card/VerticalCard3.css';
+import '@fdmg/design-system/components/design-tokens/design-tokens.css';
+import '@fdmg/design-system/components/button/Button.css';
+import '@fdmg/design-system/components/article-link-block/LinkBlock.css';
+import '@fdmg/design-system/components/article-meta/ArticleMeta.css';
+import '@fdmg/design-system/components/article-summary/Summary.css';
+import '@fdmg/design-system/components/input/TextInput.css';
+import '@fdmg/design-system/components/input/Switch.css';
+import '@fdmg/design-system/components/card/LinkCard.css';
+import '@fdmg/design-system/components/card/VerticalCard3.css';
 
 declare let process: any;
 

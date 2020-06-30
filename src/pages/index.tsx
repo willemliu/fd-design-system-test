@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 //     LinkCard,
 // } from '@fdmg/design-system';
 import { ArticleMeta } from '@fdmg/design-system/components/article-meta/ArticleMeta';
+import { LinkBlock } from '@fdmg/design-system/components/article-link-block/LinkBlock';
 import { LinkCard } from '@fdmg/design-system/components/card/LinkCard';
 import { Summary } from '@fdmg/design-system/components/article-summary/Summary';
 import { Button } from '@fdmg/design-system/components/button/Button';
@@ -52,6 +53,14 @@ function Index() {
             <hr />
 
             <TextInput id="textinput" required={true} />
+
+            <hr />
+
+            <LinkBlock
+                title="Read more"
+                description="Click here to read all about it"
+                url="https://fd.nl"
+            />
 
             <hr />
 
