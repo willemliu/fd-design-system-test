@@ -8,6 +8,7 @@ import '@fdmg/design-system/components/button/Button.css';
 import '@fdmg/design-system/components/article-link-block/LinkBlock.css';
 import '@fdmg/design-system/components/article-meta/ArticleMeta.css';
 import '@fdmg/design-system/components/article-summary/Summary.css';
+import '@fdmg/design-system/components/author-info/AuthorInfo.css';
 import '@fdmg/design-system/components/input/TextInput.css';
 import '@fdmg/design-system/components/input/Switch.css';
 import '@fdmg/design-system/components/card/LinkCard.css';

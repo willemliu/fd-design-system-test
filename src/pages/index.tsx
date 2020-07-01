@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 //     LinkCard,
 // } from '@fdmg/design-system';
 import { ArticleMeta } from '@fdmg/design-system/components/article-meta/ArticleMeta';
+import { AuthorInfo } from '@fdmg/design-system/components/author-info/AuthorInfo';
 import { LinkBlock } from '@fdmg/design-system/components/article-link-block/LinkBlock';
 import { LinkCard } from '@fdmg/design-system/components/card/LinkCard';
 import { Summary } from '@fdmg/design-system/components/article-summary/Summary';
@@ -27,6 +28,13 @@ function Index() {
 
     function handleSwitch() {
         setMode(mode === 'light' ? 'dark' : 'light');
+    }
+
+    function handleAuthorInfo(e: React.MouseEvent<HTMLButtonElement>) {
+        console.log(e);
+    }
+    function handleFollow(follow: boolean) {
+        setMode(follow ? 'dark' : 'light');
     }
 
     return (
@@ -68,6 +76,25 @@ function Index() {
                 link="/mijn-nieuws"
                 title="Beheer"
                 linkText="Ga naar laatste nieuws"
+            />
+
+            <hr />
+
+            <AuthorInfo
+                description={
+                    <p>
+                        Nelleke Trappenburg schrijft bij het FD over pensioenen:
+                        dekkingsgraden, beleggingskosten, nieuwe wetgeving etc.
+                        Eerder werkte zij onder meer op de beursredactie.
+                    </p>
+                }
+                imageUrl="https://images.fd.nl/ffa583e0c7fbc666934ecc326a88defc2773f4e9.jpeg?fit=crop&amp;crop=faces&amp;auto=format&amp;q=45&amp;cs=tinysrgb&amp;w=640&amp;h=640&amp;fm=jpg"
+                title="Nelleke Trappenburg"
+                followed={mode === 'dark'}
+                onEmailClick={handleAuthorInfo}
+                onFollowAuthorClick={handleFollow}
+                onLinkedInClick={handleAuthorInfo}
+                onTwitterClick={handleAuthorInfo}
             />
 
             <hr />
