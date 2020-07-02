@@ -22,7 +22,7 @@
     "author": "Willem Liu",
     "license": "ISC",
     "dependencies": {
-        "@fdmg/design-system": "^0.4.4-canary.1",
+        "@fdmg/design-system": "^0.4.4",
         "next": "^9.4.4",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
@@ -44,7 +44,7 @@
         "raw-loader": "^4.0.1",
         "sass": "^1.26.9",
         "ts-loader": "^7.0.5",
-        "typescript": "^3.9.5",
+        "typescript": "^3.9.6",
         "webpack": "^4.43.0",
         "webpack-bundle-analyzer": "^3.8.0",
         "webpack-cli": "^3.3.12"

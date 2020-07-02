@@ -7,6 +7,7 @@ import '@fdmg/design-system/components/design-tokens/design-tokens.css';
 import '@fdmg/design-system/components/button/Button.css';
 import '@fdmg/design-system/components/article-link-block/LinkBlock.css';
 import '@fdmg/design-system/components/article-meta/ArticleMeta.css';
+import '@fdmg/design-system/components/article-tags/ArticleTags.css';
 import '@fdmg/design-system/components/article-summary/Summary.css';
 import '@fdmg/design-system/components/author-info/AuthorInfo.css';
 import '@fdmg/design-system/components/input/TextInput.css';

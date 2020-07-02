@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 //     LinkCard,
 // } from '@fdmg/design-system';
 import { ArticleMeta } from '@fdmg/design-system/components/article-meta/ArticleMeta';
+import { ArticleTags } from '@fdmg/design-system/components/article-tags/ArticleTags';
 import { AuthorInfo } from '@fdmg/design-system/components/author-info/AuthorInfo';
 import { LinkBlock } from '@fdmg/design-system/components/article-link-block/LinkBlock';
 import { LinkCard } from '@fdmg/design-system/components/card/LinkCard';
@@ -25,6 +26,23 @@ import {
 
 function Index() {
     const [mode, setMode] = useState('light');
+    const [tags, setTags] = useState([
+        {
+            tag: 'Detailhandel',
+            uuid: '1',
+        },
+        {
+            selected: true,
+            tag: 'Eten & Drinken',
+            uuid: '2',
+        },
+        {
+            alertSelected: true,
+            selected: true,
+            tag: 'Supermarkt',
+            uuid: '3',
+        },
+    ]);
 
     useEffect(() => {
         document.documentElement.classList.remove('light', 'dark');
@@ -41,6 +59,58 @@ function Index() {
     function handleFollow(follow: boolean) {
         setMode(follow ? 'dark' : 'light');
     }
+
+    const onDisableAlertClick = (theTag: string) => {
+        setTags(
+            tags.map((tag: any) => {
+                if (tag.tag === theTag) {
+                    return { ...tag, alertSelected: false };
+                } else {
+                    return tag;
+                }
+            })
+        );
+    };
+
+    const onEnableAlertClick = (theTag: string) => {
+        setTags(
+            tags.map((tag: any) => {
+                if (tag.tag === theTag) {
+                    return { ...tag, alertSelected: true };
+                } else {
+                    return tag;
+                }
+            })
+        );
+    };
+
+    const onFollowClick = (theTag: string) => {
+        setTags(
+            tags.map((tag: any) => {
+                if (tag.tag === theTag) {
+                    return { ...tag, selected: true };
+                } else {
+                    return tag;
+                }
+            })
+        );
+    };
+
+    const onUnfollowClick = (theTag: string) => {
+        setTags(
+            tags.map((tag: any) => {
+                if (tag.tag === theTag) {
+                    return {
+                        ...tag,
+                        selected: false,
+                        alertSelected: false,
+                    };
+                } else {
+                    return tag;
+                }
+            })
+        );
+    };
 
     return (
         <section>
@@ -104,6 +174,18 @@ function Index() {
 
             <hr />
 
+            <ArticleTags
+                onDisableAlertClick={onDisableAlertClick}
+                onEnableAlertClick={onEnableAlertClick}
+                onFollowClick={onFollowClick}
+                onUnfollowClick={onUnfollowClick}
+                title="Volgen via mijn nieuws"
+                titleLink="https://fd.nl/mijn-nieuws"
+                tags={tags}
+            />
+
+            <hr />
+
             <VerticalCard3
                 id="1321841"
                 url="https://fd.nl/ondernemen/1321841/den-haag-zet-druk-op-pandeigenaren-om-huurverlaging-winkeliers-te-slikken"
@@ -126,10 +208,10 @@ function Index() {
                     onRunExperiment={console.log}
                 >
                     <Variant name="A" onClick={console.log}>
-                        <h1>Headline 1</h1>
+                        <h1>Headline 1 (variant A)</h1>
                     </Variant>
                     <Variant name="B" onClick={console.log}>
-                        <h1>Headline 2</h1>
+                        <h1>Headline 2 (variant B)</h1>
                     </Variant>
                 </Experiment>
             </ABProvider>
