@@ -17,6 +17,11 @@ import { Button } from '@fdmg/design-system/components/button/Button';
 import { TextInput } from '@fdmg/design-system/components/input/TextInput';
 import { Switch } from '@fdmg/design-system/components/input/Switch';
 import { VerticalCard3 } from '@fdmg/design-system/components/card/VerticalCard3';
+import {
+    Experiment,
+    Variant,
+    ABProvider,
+} from '@fdmg/design-system/components/ab/ab';
 
 function Index() {
     const [mode, setMode] = useState('light');
@@ -110,6 +115,24 @@ function Index() {
                 title="Den Haag zet druk op verhuurders om huurverlaging te slikken"
                 intro="Het Rijk sluit overheidsingrijpen niet uit om een akkoord tussen verhuurders en winkeliers af te dwingen, nu onderhandelingen moeizaam verlopen."
             />
+
+            <hr />
+
+            <ABProvider>
+                <Experiment
+                    name="Globally-unique-experiment-name"
+                    debugUriParam="ABdebug=true"
+                    onClick={console.log}
+                    onRunExperiment={console.log}
+                >
+                    <Variant name="A" onClick={console.log}>
+                        <h1>Headline 1</h1>
+                    </Variant>
+                    <Variant name="B" onClick={console.log}>
+                        <h1>Headline 2</h1>
+                    </Variant>
+                </Experiment>
+            </ABProvider>
         </section>
     );
 }
