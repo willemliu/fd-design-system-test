@@ -23,6 +23,7 @@ import {
     Variant,
     ABProvider,
 } from '@fdmg/design-system/components/ab/ab';
+import Head from 'next/head';
 
 function Index() {
     const [mode, setMode] = useState('light');
@@ -114,6 +115,10 @@ function Index() {
 
     return (
         <section>
+            <Head>
+                <meta name="robots" content="noindex" />
+            </Head>
+
             <ArticleMeta authors={[{ fullName: 'Willem L.' }]} />
             <hr />
 
