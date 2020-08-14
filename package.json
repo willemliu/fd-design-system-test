@@ -22,7 +22,7 @@
     "author": "Willem Liu",
     "license": "ISC",
     "dependencies": {
-        "@fdmg/design-system": "^0.4.18",
+        "@fdmg/design-system": "^0.4.20-canary.6",
         "next": "^9.5.1",
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
