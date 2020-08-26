@@ -18,6 +18,7 @@ import { Modal } from '@fdmg/design-system/components/modal/Modal';
 import { Summary } from '@fdmg/design-system/components/article-summary/Summary';
 import { TextInput } from '@fdmg/design-system/components/input/TextInput';
 import { Switch } from '@fdmg/design-system/components/input/Switch';
+import { HorizontalCard1 } from '@fdmg/design-system/components/card/HorizontalCard1';
 import { VerticalCard3 } from '@fdmg/design-system/components/card/VerticalCard3';
 import {
     Experiment,
@@ -197,6 +198,18 @@ function Index() {
                 title="Volgen via mijn nieuws"
                 titleLink="https://fd.nl/mijn-nieuws"
                 tags={tags}
+            />
+
+            <hr />
+
+            <HorizontalCard1
+                id="1343811"
+                url="https://fd.nl/ondernemen/1343811/omzet-alfen-in-eerste-coronakwartaal-58"
+                imageUrl="https://images.fd.nl/C_yJRp_QqzybEdlK4D6SibEUxiA.jpg?rect=.0,.0,.73375,.9999999999999999&fit=crop&crop=faces&auto=format&q=45&w=300"
+                label="Energie"
+                time="08:10"
+                title="Omzet Alfen stijgt in eerste coronakwartaal met 58%"
+                readingTime={7}
             />
 
             <hr />

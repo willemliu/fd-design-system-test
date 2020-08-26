@@ -14,6 +14,7 @@ import '@fdmg/design-system/components/author-info/AuthorInfo.css';
 import '@fdmg/design-system/components/input/TextInput.css';
 import '@fdmg/design-system/components/input/Switch.css';
 import '@fdmg/design-system/components/card/LinkCard.css';
+import '@fdmg/design-system/components/card/HorizontalCard1.css';
 import '@fdmg/design-system/components/card/VerticalCard3.css';
 import '@fdmg/design-system/components/modal/Modal.css';
 
