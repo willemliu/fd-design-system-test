@@ -25,9 +25,15 @@ import {
     Variant,
     ABProvider,
 } from '@fdmg/design-system/components/ab/ab';
+import {
+    CookieConsent,
+    LockedContent,
+    CookieConsentStore,
+} from '@fdmg/design-system/components/cookieconsent/CookieConsent';
 import Head from 'next/head';
 
 function Index() {
+    const [cookieConsentOpened, setCookieConsentOpened] = useState(false);
     const [opened, setOpened] = useState(false);
     const [mode, setMode] = useState('light');
     const [tags, setTags] = useState([
@@ -49,9 +55,27 @@ function Index() {
     ]);
 
     useEffect(() => {
+        const subscriptionId = CookieConsentStore.subscribe(() => {
+            console.table(CookieConsentStore.getVendorNames());
+        });
+
+        return () => {
+            CookieConsentStore.unsubscribe(subscriptionId);
+        };
+    }, []);
+
+    useEffect(() => {
         document.documentElement.classList.remove('light', 'dark');
         document.documentElement.classList.add(mode);
     }, [mode]);
+
+    const handleCookieConsentToggle = useCallback(() => {
+        setCookieConsentOpened(!cookieConsentOpened);
+    }, [cookieConsentOpened]);
+
+    const handleCookieConsentClose = useCallback(() => {
+        setCookieConsentOpened(false);
+    }, [cookieConsentOpened]);
 
     const handleModalToggle = useCallback(() => {
         setOpened(!opened);
@@ -292,6 +316,71 @@ function Index() {
                     </p>
                 </>
             </Modal>
+
+            <hr />
+
+            <Switch
+                id="cookieConsentSwitch"
+                label={
+                    cookieConsentOpened ? 'Hide cookiewall' : 'Show cookiewall'
+                }
+                onChange={handleCookieConsentToggle}
+                checked={cookieConsentOpened}
+            />
+
+            <CookieConsent
+                onAcceptAll={() => console.log('accept all')}
+                onDenyAll={() => console.log('deny all')}
+                description={
+                    <>
+                        <p>
+                            FD Mediagroep (FDMG) en de daarbij horende website:
+                            FD.nl en door haar geselecteerde Partners hebben
+                            toegang tot uw gegevens en gebruiken deze informatie
+                            voor de onderstaande doeleinden. Klik op een doel om
+                            uw voorkeuren aan te passen en om meer te weten te
+                            komen over wie er om uw toestemming vraagt en/of
+                            rechtmatig belang claimt om uw gegevens voor dat
+                            doel te verwerken. Houd er rekening mee dat wanneer
+                            alle doeleinden zijn geweigerd, dit een negatief
+                            effect op bepaalde functies van de website kan
+                            hebben.
+                        </p>
+                        <p>
+                            Voor sommige doeleinden kunnen jouw persoonsgegevens
+                            worden verwerkt op de juridische grond van
+                            rechtmatig belang
+                        </p>
+                    </>
+                }
+                title={<h1>Cookies</h1>}
+                opened={cookieConsentOpened}
+                onClose={handleCookieConsentClose}
+            />
+
+            <LockedContent
+                vendorName="youtube"
+                lockDescription={
+                    <p>
+                        In verband met de door u gekozen cookievoorkeuren kunnen
+                        wij deze Youtube-video niet tonen. Klik hier om akkoord
+                        te gaan met de cookievoorkeuren die nodig zijn om deze
+                        Youtube-video te laden.
+                    </p>
+                }
+            >
+                <div className="embed-container">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube-nocookie.com/embed/T_tN4CnushY"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                </div>
+            </LockedContent>
+
             <hr />
 
             <ABProvider>
