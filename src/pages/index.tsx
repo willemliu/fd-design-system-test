@@ -62,7 +62,7 @@ function Index() {
             console.table(CookieConsentStore.getVendorNames());
         });
 
-        cookieConsentApi.init('example-consent').then(() => {
+        cookieConsentApi.init({ hostname: 'design-system.fd.nl' }).then(() => {
             cookieConsentApi.get().then((event) => {
                 if (!event?.data?.consents) {
                     setCookieConsentOpened(true);
