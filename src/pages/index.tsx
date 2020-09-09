@@ -29,8 +29,11 @@ import {
     CookieConsent,
     LockedContent,
     CookieConsentStore,
+    CookieConsentApi,
 } from '@fdmg/design-system/components/cookieconsent/CookieConsent';
 import Head from 'next/head';
+
+const cookieConsentApi = new CookieConsentApi();
 
 function Index() {
     const [cookieConsentOpened, setCookieConsentOpened] = useState(false);
@@ -57,6 +60,15 @@ function Index() {
     useEffect(() => {
         const subscriptionId = CookieConsentStore.subscribe(() => {
             console.table(CookieConsentStore.getVendorNames());
+        });
+
+        cookieConsentApi.init('example-consent').then(() => {
+            cookieConsentApi.get().then((event) => {
+                if (!event?.data?.consents) {
+                    setCookieConsentOpened(true);
+                }
+                CookieConsentStore.setVendorNames(event?.data?.consents || []);
+            });
         });
 
         return () => {
