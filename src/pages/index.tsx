@@ -12,6 +12,8 @@ import { ArticleMeta } from '@fdmg/design-system/components/article-meta/Article
 import { ArticleTags } from '@fdmg/design-system/components/article-tags/ArticleTags';
 import { AuthorInfo } from '@fdmg/design-system/components/author-info/AuthorInfo';
 import { Button } from '@fdmg/design-system/components/button/Button';
+import { ButtonCta } from '@fdmg/design-system/components/button/ButtonCta';
+import { ButtonGhost } from '@fdmg/design-system/components/button/ButtonGhost';
 import { LinkBlock } from '@fdmg/design-system/components/article-link-block/LinkBlock';
 import { LinkCard } from '@fdmg/design-system/components/card/LinkCard';
 import { Modal } from '@fdmg/design-system/components/modal/Modal';
@@ -184,6 +186,14 @@ function Index() {
             <hr />
 
             <Button onClick={handleSwitch}>Test button</Button>
+
+            <hr />
+
+            <ButtonCta onClick={handleSwitch}>Test button</ButtonCta>
+
+            <hr />
+
+            <ButtonGhost onClick={handleSwitch}>Test button</ButtonGhost>
 
             <hr />
 
