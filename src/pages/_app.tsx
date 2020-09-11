@@ -6,6 +6,8 @@ import Head from 'next/head';
 import '@fdmg/design-system/components/design-tokens/design-tokens.css';
 import '@fdmg/design-system/components/ab/ab.css';
 import '@fdmg/design-system/components/button/Button.css';
+import '@fdmg/design-system/components/button/ButtonCta.css';
+import '@fdmg/design-system/components/button/ButtonGhost.css';
 import '@fdmg/design-system/components/article-link-block/LinkBlock.css';
 import '@fdmg/design-system/components/article-meta/ArticleMeta.css';
 import '@fdmg/design-system/components/article-tags/ArticleTags.css';
