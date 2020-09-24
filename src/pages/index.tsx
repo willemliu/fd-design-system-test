@@ -19,6 +19,7 @@ import { LinkCard } from '@fdmg/design-system/components/card/LinkCard';
 import { Modal } from '@fdmg/design-system/components/modal/Modal';
 import { Summary } from '@fdmg/design-system/components/article-summary/Summary';
 import { TextInput } from '@fdmg/design-system/components/input/TextInput';
+import { Select } from '@fdmg/design-system/components/input/Select';
 import { Switch } from '@fdmg/design-system/components/input/Switch';
 import { HorizontalCard1 } from '@fdmg/design-system/components/card/HorizontalCard1';
 import { VerticalCard3 } from '@fdmg/design-system/components/card/VerticalCard3';
@@ -198,6 +199,15 @@ function Index() {
             <hr />
 
             <TextInput id="textinput" required={true} />
+
+            <hr />
+
+            <Select id="select" label="Geslacht" required={true}>
+                <option value="">-- geslacht --</option>
+                <option value="m">Man</option>
+                <option value="v">Vrouw</option>
+                <option value="non-binary">Non-binary</option>
+            </Select>
 
             <hr />
 
