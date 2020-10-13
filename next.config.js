@@ -1,9 +1,6 @@
 module.exports = {
     target: process.env.NOW_SERVERLESS === 'false' ? 'server' : 'serverless',
     pageExtensions: ['jsx', 'js', 'ts', 'tsx'],
-    experimental: {
-        polyfillsOptimization: true,
-    },
     webpack: (config, options) => {
         config.node = {
             fs: 'empty',

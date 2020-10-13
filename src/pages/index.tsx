@@ -180,7 +180,7 @@ function Index() {
                         menuItems: [
                             {
                                 text: 'menu item 1.1',
-                                href: '#',
+                                href: '/',
                             },
                         ],
                     },
@@ -190,7 +190,7 @@ function Index() {
                         menuItems: [
                             {
                                 text: 'menu item 2.1',
-                                href: '#',
+                                href: '/',
                             },
                             {
                                 text: 'menu item 2.2',
@@ -198,11 +198,11 @@ function Index() {
                                 menuItems: [
                                     {
                                         text: 'menu item 2.2.1',
-                                        href: '#',
+                                        href: '/',
                                     },
                                     {
                                         text: 'menu item 2.2.2',
-                                        href: '#',
+                                        href: '/',
                                     },
                                 ],
                             },
