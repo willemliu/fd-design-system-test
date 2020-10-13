@@ -21,6 +21,7 @@ import '@fdmg/design-system/components/card/HorizontalCard1.css';
 import '@fdmg/design-system/components/card/VerticalCard3.css';
 import '@fdmg/design-system/components/modal/Modal.css';
 import '@fdmg/design-system/components/cookieconsent/CookieConsent.css';
+import '@fdmg/design-system/components/menu/Menu.css';
 
 declare let process: any;
 

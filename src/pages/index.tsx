@@ -8,6 +8,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 //     TextInput,
 //     LinkCard,
 // } from '@fdmg/design-system';
+import { Menu } from '@fdmg/design-system/components/menu/Menu';
 import { ArticleMeta } from '@fdmg/design-system/components/article-meta/ArticleMeta';
 import { ArticleTags } from '@fdmg/design-system/components/article-tags/ArticleTags';
 import { AuthorInfo } from '@fdmg/design-system/components/author-info/AuthorInfo';
@@ -168,6 +169,48 @@ function Index() {
             <Head>
                 <meta name="robots" content="noindex" />
             </Head>
+
+            <Menu
+                ariaLabel="Test menu"
+                moreLabel="More"
+                menuItems={[
+                    {
+                        text: 'menu item 1',
+                        isToggle: true,
+                        menuItems: [
+                            {
+                                text: 'menu item 1.1',
+                                href: '#',
+                            },
+                        ],
+                    },
+                    {
+                        text: 'menu item 2',
+                        isToggle: true,
+                        menuItems: [
+                            {
+                                text: 'menu item 2.1',
+                                href: '#',
+                            },
+                            {
+                                text: 'menu item 2.2',
+                                isToggle: true,
+                                menuItems: [
+                                    {
+                                        text: 'menu item 2.2.1',
+                                        href: '#',
+                                    },
+                                    {
+                                        text: 'menu item 2.2.2',
+                                        href: '#',
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                ]}
+            />
+            <hr />
 
             <ArticleMeta authors={[{ fullName: 'Willem L.' }]} />
             <hr />
