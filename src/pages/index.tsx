@@ -24,6 +24,8 @@ import { Select } from '@fdmg/design-system/components/input/Select';
 import { Switch } from '@fdmg/design-system/components/input/Switch';
 import { HorizontalCard1 } from '@fdmg/design-system/components/card/HorizontalCard1';
 import { VerticalCard3 } from '@fdmg/design-system/components/card/VerticalCard3';
+import { VerticalToolbar } from '@fdmg/design-system/components/toolbar/VerticalToolbar';
+import { HorizontalToolbar } from '@fdmg/design-system/components/toolbar/HorizontalToolbar';
 import {
     Experiment,
     Variant,
@@ -325,6 +327,14 @@ function Index() {
                 intro="Het Rijk sluit overheidsingrijpen niet uit om een akkoord tussen verhuurders en winkeliers af te dwingen, nu onderhandelingen moeizaam verlopen."
                 readingTime={7}
             />
+
+            <hr />
+
+            <VerticalToolbar id="12345" onClick={console.log} />
+
+            <hr />
+
+            <HorizontalToolbar id="12345" onClick={console.log} />
 
             <hr />
 
