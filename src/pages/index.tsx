@@ -310,7 +310,6 @@ function Index() {
                 label="Energie"
                 time="08:10"
                 title="Omzet Alfen stijgt in eerste coronakwartaal met 58%"
-                readingTime={7}
             />
 
             <hr />
@@ -325,7 +324,6 @@ function Index() {
                 label="Detailhandel"
                 title="Den Haag zet druk op verhuurders om huurverlaging te slikken"
                 intro="Het Rijk sluit overheidsingrijpen niet uit om een akkoord tussen verhuurders en winkeliers af te dwingen, nu onderhandelingen moeizaam verlopen."
-                readingTime={7}
             />
 
             <hr />
