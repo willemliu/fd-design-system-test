@@ -309,7 +309,7 @@ function Index() {
                 url="https://fd.nl/ondernemen/1343811/omzet-alfen-in-eerste-coronakwartaal-58"
                 imageComponent={
                     <Image
-                        src={`https://images.fd.nl/C_yJRp_QqzybEdlK4D6SibEUxiA.jpg?rect=.0,.0,.73375,.9999999999999999&fit=crop&crop=faces&auto=format&q=45&w=300`}
+                        src="https://images.fd.nl/C_yJRp_QqzybEdlK4D6SibEUxiA.jpg?rect=.0,.0,.73375,.9999999999999999&fit=crop&crop=faces&auto=format&q=45&w=300"
                         alt="Omzet Alfen stijgt in eerste coronakwartaal met 58%"
                         unsized={true}
                     />
