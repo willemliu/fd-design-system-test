@@ -22,30 +22,30 @@
     "author": "Willem Liu",
     "license": "ISC",
     "dependencies": {
-        "next": "^9.5.5",
+        "next": "^10.0.0",
         "react": "^16.14.0",
         "react-dom": "^16.14.0"
     },
     "devDependencies": {
         "@azure/functions": "^1.0.2-beta2",
-        "@fdmg/design-system": "^0.4.25-canary.12",
-        "@types/node": "^14.11.8",
-        "@types/react": "^16.9.51",
-        "@types/react-dom": "^16.9.8",
+        "@fdmg/design-system": "^0.4.25-canary.26",
+        "@types/node": "^14.14.5",
+        "@types/react": "^16.9.54",
+        "@types/react-dom": "^16.9.9",
         "@typescript-eslint/eslint-plugin": "^2.34.0",
         "@typescript-eslint/parser": "^2.34.0",
         "cross-env": "^7.0.2",
         "date-input-polyfill": "^2.14.0",
-        "eslint": "^7.10.0",
-        "eslint-config-prettier": "^6.12.0",
+        "eslint": "^7.12.1",
+        "eslint-config-prettier": "^6.15.0",
         "eslint-plugin-prettier": "^3.1.4",
-        "eslint-plugin-react": "^7.21.4",
+        "eslint-plugin-react": "^7.21.5",
         "prettier": "^2.1.2",
         "raw-loader": "^4.0.1",
         "sass": "^1.27.0",
-        "ts-loader": "^8.0.4",
-        "typescript": "^4.0.3",
+        "ts-loader": "^8.0.7",
+        "typescript": "^4.0.5",
         "webpack-bundle-analyzer": "^3.9.0",
-        "webpack-cli": "^4.0.0"
+        "webpack-cli": "^4.1.0"
     }
 }

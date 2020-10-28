@@ -1,6 +1,9 @@
 module.exports = {
     target: process.env.NOW_SERVERLESS === 'false' ? 'server' : 'serverless',
     pageExtensions: ['jsx', 'js', 'ts', 'tsx'],
+    images: {
+        domains: ['fd-external-development.imgix.net', 'images.fd.nl'],
+    },
     webpack: (config, options) => {
         config.node = {
             fs: 'empty',
