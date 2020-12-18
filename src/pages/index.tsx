@@ -38,7 +38,6 @@ import {
     CookieConsentApi,
 } from '@fdmg/design-system/components/cookieconsent/CookieConsent';
 import Head from 'next/head';
-import Image from 'next/image';
 
 const cookieConsentApi = new CookieConsentApi();
 
@@ -307,13 +306,7 @@ function Index() {
             <HorizontalCard1
                 id="1343811"
                 url="https://fd.nl/ondernemen/1343811/omzet-alfen-in-eerste-coronakwartaal-58"
-                imageComponent={
-                    <Image
-                        src={`https://images.fd.nl/C_yJRp_QqzybEdlK4D6SibEUxiA.jpg?rect=.0,.0,.73375,.9999999999999999&fit=crop&crop=faces&auto=format&q=45&w=300`}
-                        alt="Omzet Alfen stijgt in eerste coronakwartaal met 58%"
-                        unsized={true}
-                    />
-                }
+                imageUrl="https://images.fd.nl/C_yJRp_QqzybEdlK4D6SibEUxiA.jpg?rect=.0,.0,.73375,.9999999999999999&fit=crop&crop=faces&auto=format&q=45&w=300"
                 label="Energie"
                 time="08:10"
                 title="Omzet Alfen stijgt in eerste coronakwartaal met 58%"
