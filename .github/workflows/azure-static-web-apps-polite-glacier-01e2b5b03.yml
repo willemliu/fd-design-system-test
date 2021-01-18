@@ -22,7 +22,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
 
       - name: PROD npm install, build, and test
         if: github.ref == 'refs/heads/master'
