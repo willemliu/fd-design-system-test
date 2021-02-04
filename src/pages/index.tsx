@@ -19,6 +19,7 @@ import { LinkBlock } from '@fdmg/design-system/components/article-link-block/Lin
 import { LinkCard } from '@fdmg/design-system/components/card/LinkCard';
 import { Modal } from '@fdmg/design-system/components/modal/Modal';
 import { Summary } from '@fdmg/design-system/components/article-summary/Summary';
+import { TextArea } from '@fdmg/design-system/components/input/TextArea';
 import { TextInput } from '@fdmg/design-system/components/input/TextInput';
 import { Select } from '@fdmg/design-system/components/input/Select';
 import { Switch } from '@fdmg/design-system/components/input/Switch';
@@ -244,6 +245,10 @@ function Index() {
             <hr />
 
             <TextInput id="textinput" required={true} />
+
+            <hr />
+
+            <TextArea id="textarea" required={true} />
 
             <hr />
 
