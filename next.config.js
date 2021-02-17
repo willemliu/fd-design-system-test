@@ -1,5 +1,5 @@
 module.exports = {
-    target: process.env.NOW_SERVERLESS === 'false' ? 'server' : 'serverless',
+    target: process.env.NOW_SERVERLESS === 'true' ? 'serverless' : 'server',
     pageExtensions: ['jsx', 'js', 'ts', 'tsx'],
     images: {
         domains: ['fd-external-development.imgix.net', 'images.fd.nl'],
