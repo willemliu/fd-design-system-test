@@ -4,11 +4,8 @@ module.exports = {
     images: {
         domains: ['fd-external-development.imgix.net', 'images.fd.nl'],
     },
+    future: { webpack5: true },
     webpack: (config, options) => {
-        config.node = {
-            fs: 'empty',
-        };
-
         // SVG
         config.module.rules.push({
             test: /\.svg$/,
