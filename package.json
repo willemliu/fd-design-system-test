@@ -29,7 +29,7 @@
     "devDependencies": {
         "@azure/functions": "^1.2.3",
         "@fdmg/design-system": "^0.4.41-canary.5",
-        "@types/node": "^14.14.28",
+        "@types/node": "^18.7.3",
         "@types/react": "^17.0.2",
         "@types/react-dom": "^17.0.1",
         "@typescript-eslint/eslint-plugin": "^4.15.1",
